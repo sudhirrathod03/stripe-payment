@@ -19,7 +19,7 @@ export const createPaymentIntent = async (req, res) => {
       amount: 10000,
       currency: "inr",
     });
-    console.log("paymentIntent", paymentIntent);
+
     res.status(200).json({ clientSecret: (await paymentIntent).client_secret });
   } catch (error) {
     res

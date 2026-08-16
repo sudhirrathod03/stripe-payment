@@ -11,6 +11,9 @@ import {
     const handleSubmit = async (event) => {
       event.preventDefault();
   
+
+      console.log("stripe:", stripe);
+      console.log("elements:", elements);
       if (!stripe || !elements) {
         return;
       }
