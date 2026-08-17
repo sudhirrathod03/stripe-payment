@@ -27,3 +27,13 @@ export const createPaymentIntent = async (req, res) => {
       .json({ message: "Payment creation failed", success: false });
   }
 };
+
+export const createWebhook = async(req, res)=>{
+  try {
+    const event = req.body
+    console.log(event.type);
+    
+  } catch (error) {
+    res.status(500).json({message:error.message})
+  }
+}
