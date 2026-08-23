@@ -28,12 +28,3 @@ export const createPaymentIntent = async (req, res) => {
   }
 };
 
-export const createWebhook = async(req, res)=>{
-  try {
-    const event = req.body
-    console.log(event.type);
-    
-  } catch (error) {
-    res.status(500).json({message:error.message})
-  }
-}
